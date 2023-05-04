@@ -429,7 +429,7 @@ main{
 
 .card {
     width: 27rem;
-    height: 20rem;
+    height: auto;
     margin-right: 2rem;
     margin-bottom: 2rem; /* add margin bottom to create space between cards */
 }
@@ -441,8 +441,8 @@ main{
     max-width: 1000px;
     max-height: 600px;
     background-color: #494d4f;
-    background-image: linear-gradient(50deg, #505877 -5%, #3c7a866a 74%);
-    color: white;
+    background-image: linear-gradient(90deg, #51d8ed -5%, #f466e56a 74%);
+    color: black;
     padding-bottom: 40px;
     margin-left: 15%;
     margin-bottom: 3rem;
@@ -464,7 +464,7 @@ main{
 }
 #Contact h1,
 #Contact span{
-    color: white;
+    color: black;
 }
 #contact-form{
     margin-left: 20%;
@@ -477,7 +477,7 @@ main{
     margin-left: 6%;
 }
 .contact-deatils h3{
-    color: white;
+    color: black;
     font-weight: 550;
     font-size: 1.3rem;
 
@@ -486,20 +486,20 @@ main{
     width: 30%;
 }
 .contact-deatils p{
-    color: lightgrey;
+    color: black;
 }
 .contact-info i{
-    color: white;
+    color: black;
    
 }
 .contact-info{
     margin-bottom: 20px;
-    color: lightgray;
+    color: black;
     font-size: 1rem;
 
 }
 .contact-info span{
-    color: lightgrey;
+    color: black;
     margin-left: 0.4rem;
 }
 
@@ -517,11 +517,11 @@ main{
     padding: 4px 10px;
     width: 90%;
     background: transparent;
-    color: lightgrey;
+    color: black;
 }
 #contact-form button[type="submit"]{
     background: transparent;
-    border: 2px solid white;
+    border: 2px solid black;
     margin-top: 5%;
     margin-left: 35%;
     padding: 0.8em;
@@ -532,7 +532,7 @@ main{
     line-height: 1;
     letter-spacing: 0.4334;
     border-radius: 2px;
-    color: white;
+    color: black;
 }
 #contact-form button:hover{
     background: white;
@@ -562,7 +562,7 @@ main{
         margin-left: 3%;
     }
     .contact-deatils h3{
-        color: white;
+        color: black;
         font-weight: 250;
         font-size: 0.5rem;
     
