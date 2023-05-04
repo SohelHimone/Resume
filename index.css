@@ -1,12 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
-
-body{
+/* base css */
+html {
+    font-size: 16px;
+  }
+  
+  body {
     font-family: roboto;
-    /* align-items: center; */
-    margin: 0%;
-    padding: 0%;
-
-}
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+  }
 .nav-link {
     margin-right: 1rem;
     margin-left: 1rem;
@@ -22,6 +26,19 @@ body{
     color:blue;
     font-weight: bold;
     font-size: 1.2rem;
+}
+@media (max-width: 600px) {
+    .navbar-brand{
+        margin-left: 0px;
+        color: blue;
+    }
+    .navbar-nav{
+        margin-right: 0px;
+    }
+    .navbar{
+        width: auto;
+        right:2%;
+    }
 }
 
 /* card css */
@@ -51,14 +68,17 @@ body{
 @media (max-width: 768px) {
     .avatar{
         width: 150px;
-    height: 150px;   
+        height: 150px;   
+        margin: 20px auto;
     }
     .card-title{
         font-size: 1.2rem;
+        text-align: center;
     }
     .card-text{
         font-size: 0.8rem;
         color: gray;
+        text-align: center;
     }
     .avatar .img{
         width: 150px;
@@ -67,7 +87,14 @@ body{
         border-radius: 50%;
         animation: pulse 1.5s infinite;
     }
-  }
+    .navbar-brand{
+        margin-left: 20px;
+    }
+    .navbar-nav{
+        margin-right: 20px;
+    }
+}
+
   
   
 
@@ -82,22 +109,75 @@ body{
       border: 3px solid black;
     }
   }
+main{
+    max-width:1500px ;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin-left: 10%; */
+}
 
+@media only screen and (max-width: 600px) {
+    /* CSS styles for screens with a maximum width of 600 pixels */
+    main{
+        max-width:750px ;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 10%;
+    }
+}
 /* social icons */
+.containers{
+    width: 1200px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    /* border: 1px solid black; */
+    margin-left: 0;
+}
+
+@media only screen and (max-width: 768px) {
+    /* CSS styles for screens with a maximum width of 600 pixels */
+    .containers{
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        align-items: center;
+        /* border: 1px solid black; */
+        margin-left: 20%;
+    }
+}
+.container{
+    width: auto;
+    /* border: 1px solid black; */
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
 .social-link{
     width: 100px;
     height: 300px;
     margin-left: 0;
+    /* border: 1px solid black; */
 }
 .Vertical-list li{
     margin-left: 0;
-    display:block;
+    display:inline-block;
     margin: 0px 8px 8px 0px;
     font-weight: 100px;
     font-size: 0.9rem;
-    
-
-
 }
 .Vertical-list li a{
     text-decoration: none;
@@ -116,6 +196,22 @@ body{
 .social-icons li a i:hover{
     box-shadow: 0px 0px 6px 4px rgba(125, 24, 241, 0.3);
 }
+
+@media (max-width: 768px) {
+    .social-link{
+        width: auto;
+        height: auto;
+        margin-left: 0;
+    }
+    .Vertical-list li{
+        margin-left: 0;
+        display:block;
+        font-weight: 70px;
+        font-size: 0.45rem;
+    }
+  }
+
+
 
 /* about css */
 .about{
@@ -210,6 +306,23 @@ body{
     margin-bottom: 1rem;
 }
 
+
+@media (max-width: 600px) {
+    .Skills .row {
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-left: 50%;
+    }
+    .Skills .title{
+        margin-left: 60%; 
+        margin-bottom: 3rem;
+        margin-top: 3rem;
+    }
+}
 /* Education section  */
 
 .tab-content{
@@ -285,7 +398,7 @@ body{
     font-size: 2rem;
 }
 
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 600px){
     
     .timeline-box::after{
         left:-9.8% !important;
@@ -294,25 +407,29 @@ body{
         top:10%;
         left:2%;
     }
+    .timeline{
+        margin-left: 20%;
+    }
+
+    .timeline-box {
+        width: 100%;
+        left: 10% !important;
+    }
 
 }
 
 /* projects css */
 .Projects{
- width: 1200px;
  height: auto;
  display: flex;
  flex-wrap: wrap;
  flex-direction: column;
-}
-.container {
-    display: flex;
-    flex-wrap: wrap;
+ margin-left: 15%;
 }
 
 .card {
-    max-width: 32rem;
-    max-height: 30rem;
+    width: 27rem;
+    height: 20rem;
     margin-right: 2rem;
     margin-bottom: 2rem; /* add margin bottom to create space between cards */
 }
@@ -336,6 +453,7 @@ body{
 
 
 }
+
 .section-heading{
     margin-left: 40%;
     margin-top: 2rem;
@@ -421,18 +539,43 @@ body{
     color: black;
 }
 
-/* contact section responsive look */
-/* #contact-form{
-    margin: 0%;
+
+@media  screen and(max-width: 600px){
+    #Contact{
+        width: 1200px;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #contact-form{
+        margin: 0%;
+    }
+    .contact-container{
+        flex-wrap: wrap;
+        width: auto;
+        height: auto;
+        margin-left: 10%;
+    }
+    .contact-deatils{
+        width: 10%;
+        margin-left: 3%;
+    }
+    .contact-deatils h3{
+        color: white;
+        font-weight: 250;
+        font-size: 0.5rem;
+    
+    }
+    .contact-form-container{
+        width: 70%;
+        margin: 15%;
+    }
+    .contact-info{
+        width: 70%;
+        margin: 8%;
+    } 
+    #contact-form button[type="submit"]{
+        font-size: 0.5rem;
+    }
 }
-.contact-container{
-    flex-wrap: wrap;
-}
-.contact-form-container{
-    width: 80%;
-    margin: 10%;
-}
-.contact-info{
-    width: 80%;
-    margin: 10%;
-} */
